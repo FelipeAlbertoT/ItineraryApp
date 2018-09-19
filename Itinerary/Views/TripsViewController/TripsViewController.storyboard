@@ -67,7 +67,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fOV-6v-Srh" kind="presentation" id="UfU-HE-O2X"/>
+                                    <segue destination="fOV-6v-Srh" kind="presentation" identifier="toAddTripSegue" id="UfU-HE-O2X"/>
                                 </connections>
                             </button>
                         </subviews>
