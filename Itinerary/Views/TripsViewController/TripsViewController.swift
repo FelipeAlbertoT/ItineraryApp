@@ -16,7 +16,7 @@ class TripsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = Theme.background
+        view.backgroundColor = Theme.backgroundColor
         addButton.createFloatingActionButton()
         
         
