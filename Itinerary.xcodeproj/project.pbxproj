@@ -22,6 +22,7 @@
 		C100C8E92152B3DC00CA8CDF /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100C8E82152B3DC00CA8CDF /* AddTripViewController.swift */; };
 		C100C8EC2152B82300CA8CDF /* PopupUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100C8EB2152B82300CA8CDF /* PopupUIView.swift */; };
 		C100C8EE2152CC0800CA8CDF /* AppUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100C8ED2152CC0800CA8CDF /* AppUIButton.swift */; };
+		C100C8F02152D75F00CA8CDF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100C8EF2152D75F00CA8CDF /* StringExtensions.swift */; };
 		C1140C8B214BEF1200AA9F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1140C8A214BEF1200AA9F42 /* AppDelegate.swift */; };
 		C1140C92214BEF1500AA9F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1140C91214BEF1500AA9F42 /* Assets.xcassets */; };
 		C1140C95214BEF1500AA9F42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1140C93214BEF1500AA9F42 /* LaunchScreen.storyboard */; };
@@ -43,6 +44,7 @@
 		C100C8E82152B3DC00CA8CDF /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		C100C8EB2152B82300CA8CDF /* PopupUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupUIView.swift; sourceTree = "<group>"; };
 		C100C8ED2152CC0800CA8CDF /* AppUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIButton.swift; sourceTree = "<group>"; };
+		C100C8EF2152D75F00CA8CDF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		C1140C87214BEF1200AA9F42 /* Itinerary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itinerary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1140C8A214BEF1200AA9F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1140C91214BEF1500AA9F42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				C100C8DA21518DAD00CA8CDF /* UIViewExtensions.swift */,
 				C100C8E321519C3600CA8CDF /* UIButtonExtension.swift */,
+				C100C8EF2152D75F00CA8CDF /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				C100C8CE2150018500CA8CDF /* TripFunctions.swift in Sources */,
 				C100C8D0215003E100CA8CDF /* Data.swift in Sources */,
 				C100C8D621517BEC00CA8CDF /* TripsViewController.swift in Sources */,
+				C100C8F02152D75F00CA8CDF /* StringExtensions.swift in Sources */,
 				C100C8EC2152B82300CA8CDF /* PopupUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
