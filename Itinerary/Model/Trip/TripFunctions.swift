@@ -1,0 +1,40 @@
+//
+//  TripFunctions.swift
+//  Itinerary
+//
+//  Created by Felipe Treichel on 17/09/2018.
+//  Copyright © 2018 Felipe Treichel. All rights reserved.
+//
+
+import Foundation
+
+class TripFunctions {
+    
+    static func createTrip(tripModel: TripModel) {
+        
+    }
+    
+    static func readTrips(completion: @escaping () -> ()) {
+        DispatchQueue.global(qos: .userInteractive).async {
+            if Data.tripModels.count == 0 {
+                Data.tripModels.append(TripModel(title: "Trip to Bali!"))
+                Data.tripModels.append(TripModel(title: "México"))
+                Data.tripModels.append(TripModel(title: "Russian Trip"))
+            }
+            
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
+        
+    }
+    
+    static func updateTrip(tripModel: TripModel) {
+        
+    }
+    
+    static func deleteTrip(tripModel: TripModel) {
+        
+    }
+    
+}

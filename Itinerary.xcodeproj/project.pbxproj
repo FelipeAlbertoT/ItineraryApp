@@ -7,12 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C100C8CC2150017400CA8CDF /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100C8CB2150017400CA8CDF /* TripModel.swift */; };
+		C100C8CE2150018500CA8CDF /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100C8CD2150018500CA8CDF /* TripFunctions.swift */; };
+		C100C8D0215003E100CA8CDF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100C8CF215003E100CA8CDF /* Data.swift */; };
+		C100C8D421517BC700CA8CDF /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C100C8D321517BC700CA8CDF /* TripsViewController.storyboard */; };
+		C100C8D621517BEC00CA8CDF /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100C8D521517BEC00CA8CDF /* TripsViewController.swift */; };
+		C100C8D82151851800CA8CDF /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100C8D72151851800CA8CDF /* TripsTableViewCell.swift */; };
+		C100C8DB21518DAD00CA8CDF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100C8DA21518DAD00CA8CDF /* UIViewExtensions.swift */; };
+		C100C8DE21518F9B00CA8CDF /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100C8DD21518F9B00CA8CDF /* Theme.swift */; };
+		C100C8E02151936300CA8CDF /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C100C8DF2151936300CA8CDF /* LuckiestGuy-Regular.ttf */; };
+		C100C8E2215194EE00CA8CDF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C100C8E1215194EE00CA8CDF /* Colors.xcassets */; };
+		C100C8E421519C3600CA8CDF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100C8E321519C3600CA8CDF /* UIButtonExtension.swift */; };
 		C1140C8B214BEF1200AA9F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1140C8A214BEF1200AA9F42 /* AppDelegate.swift */; };
 		C1140C92214BEF1500AA9F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1140C91214BEF1500AA9F42 /* Assets.xcassets */; };
 		C1140C95214BEF1500AA9F42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1140C93214BEF1500AA9F42 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C100C8CB2150017400CA8CDF /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		C100C8CD2150018500CA8CDF /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
+		C100C8CF215003E100CA8CDF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		C100C8D321517BC700CA8CDF /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
+		C100C8D521517BEC00CA8CDF /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		C100C8D72151851800CA8CDF /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		C100C8DA21518DAD00CA8CDF /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		C100C8DD21518F9B00CA8CDF /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		C100C8DF2151936300CA8CDF /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
+		C100C8E1215194EE00CA8CDF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C100C8E321519C3600CA8CDF /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		C1140C87214BEF1200AA9F42 /* Itinerary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itinerary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1140C8A214BEF1200AA9F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1140C91214BEF1500AA9F42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,6 +53,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C100C8C92150013B00CA8CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C100C8CF215003E100CA8CDF /* Data.swift */,
+				C100C8CA2150015300CA8CDF /* Trip */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C100C8CA2150015300CA8CDF /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				C100C8CB2150017400CA8CDF /* TripModel.swift */,
+				C100C8CD2150018500CA8CDF /* TripFunctions.swift */,
+			);
+			path = Trip;
+			sourceTree = "<group>";
+		};
+		C100C8D121517B9200CA8CDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C100C8D221517B9900CA8CDF /* TripsViewController */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C100C8D221517B9900CA8CDF /* TripsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C100C8D321517BC700CA8CDF /* TripsViewController.storyboard */,
+				C100C8D521517BEC00CA8CDF /* TripsViewController.swift */,
+				C100C8D72151851800CA8CDF /* TripsTableViewCell.swift */,
+			);
+			path = TripsViewController;
+			sourceTree = "<group>";
+		};
+		C100C8D921518D9100CA8CDF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C100C8DA21518DAD00CA8CDF /* UIViewExtensions.swift */,
+				C100C8E321519C3600CA8CDF /* UIButtonExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C100C8DC21518F8900CA8CDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C100C8DF2151936300CA8CDF /* LuckiestGuy-Regular.ttf */,
+				C100C8DD21518F9B00CA8CDF /* Theme.swift */,
+				C100C8E1215194EE00CA8CDF /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C1140C7E214BEF1200AA9F42 = {
 			isa = PBXGroup;
 			children = (
@@ -50,6 +127,10 @@
 		C1140C89214BEF1200AA9F42 /* Itinerary */ = {
 			isa = PBXGroup;
 			children = (
+				C100C8DC21518F8900CA8CDF /* Resources */,
+				C100C8D921518D9100CA8CDF /* Extensions */,
+				C100C8C92150013B00CA8CDF /* Model */,
+				C100C8D121517B9200CA8CDF /* Views */,
 				C1140C8A214BEF1200AA9F42 /* AppDelegate.swift */,
 				C1140C91214BEF1500AA9F42 /* Assets.xcassets */,
 				C1140C93214BEF1500AA9F42 /* LaunchScreen.storyboard */,
@@ -116,8 +197,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C100C8E2215194EE00CA8CDF /* Colors.xcassets in Resources */,
 				C1140C95214BEF1500AA9F42 /* LaunchScreen.storyboard in Resources */,
+				C100C8D421517BC700CA8CDF /* TripsViewController.storyboard in Resources */,
 				C1140C92214BEF1500AA9F42 /* Assets.xcassets in Resources */,
+				C100C8E02151936300CA8CDF /* LuckiestGuy-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +212,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C100C8D82151851800CA8CDF /* TripsTableViewCell.swift in Sources */,
+				C100C8DE21518F9B00CA8CDF /* Theme.swift in Sources */,
+				C100C8DB21518DAD00CA8CDF /* UIViewExtensions.swift in Sources */,
+				C100C8CC2150017400CA8CDF /* TripModel.swift in Sources */,
 				C1140C8B214BEF1200AA9F42 /* AppDelegate.swift in Sources */,
+				C100C8E421519C3600CA8CDF /* UIButtonExtension.swift in Sources */,
+				C100C8CE2150018500CA8CDF /* TripFunctions.swift in Sources */,
+				C100C8D0215003E100CA8CDF /* Data.swift in Sources */,
+				C100C8D621517BEC00CA8CDF /* TripsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
