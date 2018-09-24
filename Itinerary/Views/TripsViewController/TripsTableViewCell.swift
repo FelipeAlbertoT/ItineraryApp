@@ -9,7 +9,7 @@
 import UIKit
 
 class TripsTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tripImageView: UIImageView!
@@ -30,9 +30,17 @@ class TripsTableViewCell: UITableViewCell {
         
         tripImageView.layer.cornerRadius = cardView.layer.cornerRadius
     }
-
+    
     func setup(tripModel: TripModel) {
         titleLabel.text = tripModel.title
-        tripImageView.image = tripModel.image
+        
+        if let tripImage = tripModel.image {
+            tripImageView.alpha = 0.3
+            tripImageView.image = tripImage
+            
+            UIView.animate(withDuration: 1) {
+                self.tripImageView.alpha = 1
+            }
+        }
     }
 }
