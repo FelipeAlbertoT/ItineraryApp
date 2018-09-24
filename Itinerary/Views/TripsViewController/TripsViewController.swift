@@ -74,9 +74,9 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate{
         let delete = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerformed: @escaping (Bool) -> ()) in
             
             let alert = UIAlertController(title: "Delete Trip", message: "Are you sure you want to delete this trip?", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: self.handler /*{ (alertAction) in
+            alert.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { (alertAction) in
                 actionPerformed(false)
-            }*/))
+            }))
             alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (alertAction) in
                 TripFunctions.deleteTrip(index: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .automatic)
@@ -93,7 +93,4 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate{
         return UISwipeActionsConfiguration(actions: [delete])
     }
     
-    func handler(alertAction: UIAlertAction) {
-        //teste
-    }
 }
