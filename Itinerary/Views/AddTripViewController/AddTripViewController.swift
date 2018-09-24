@@ -10,7 +10,7 @@ import UIKit
 import Photos
 
 class AddTripViewController: UIViewController {
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tripTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
@@ -28,10 +28,8 @@ class AddTripViewController: UIViewController {
         titleLabel.layer.shadowOffset = CGSize.zero
         titleLabel.layer.shadowRadius = 5
         
-        imageView.layer.cornerRadius = 10
-        
     }
-
+    
     @IBAction func save(_ sender: Any) {
         tripTextField.rightViewMode = .never
         
@@ -63,33 +61,31 @@ class AddTripViewController: UIViewController {
     }
     
     @IBAction func addPhoto(_ sender: UIButton) {
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            PHPhotoLibrary.requestAuthorization { (status) in
-                switch status {
-                case .authorized:
+        PHPhotoLibrary.requestAuthorization { (status) in
+            switch status {
+            case .authorized:
+                self.presentPhotoLibrary()
+            case .notDetermined:
+                if status == PHAuthorizationStatus.authorized {
                     self.presentPhotoLibrary()
-                case .notDetermined:
-                    if status == PHAuthorizationStatus.authorized {
-                        self.presentPhotoLibrary()
-                    }
-                case .restricted:
-                    let alert = UIAlertController(title: "Photo Library Restricted", message: "Photo Library access is restricted and cannot be accessed.", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "Ok", style: .default)
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true)
-                case .denied:
-                    let alert = UIAlertController(title: "Photo Library Access Denied", message: "Photo Library access was previously denied. Please update your settings if you wish to change this.", preferredStyle: .alert)
-                    let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
-                        DispatchQueue.main.async {
-                            let url = URL(string: UIApplicationOpenSettingsURLString)!
-                            UIApplication.shared.open(url, options: [String : Any]())
-                        }
-                    }
-                    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-                    alert.addAction(goToSettingsAction)
-                    alert.addAction(cancelAction)
-                    self.present(alert, animated: true)
                 }
+            case .restricted:
+                let alert = UIAlertController(title: "Photo Library Restricted", message: "Photo Library access is restricted and cannot be accessed.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Ok", style: .default)
+                alert.addAction(okAction)
+                self.present(alert, animated: true)
+            case .denied:
+                let alert = UIAlertController(title: "Photo Library Access Denied", message: "Photo Library access was previously denied. Please update your settings if you wish to change this.", preferredStyle: .alert)
+                let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
+                    DispatchQueue.main.async {
+                        let url = URL(string: UIApplication.openSettingsURLString)!
+                        UIApplication.shared.open(url, options: [:])
+                    }
+                }
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+                alert.addAction(goToSettingsAction)
+                alert.addAction(cancelAction)
+                self.present(alert, animated: true)
             }
         }
     }
@@ -98,8 +94,8 @@ class AddTripViewController: UIViewController {
 
 extension AddTripViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
             self.imageView.image = image
         }
         

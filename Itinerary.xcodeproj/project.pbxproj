@@ -26,6 +26,7 @@
 		C1140C8B214BEF1200AA9F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1140C8A214BEF1200AA9F42 /* AppDelegate.swift */; };
 		C1140C92214BEF1500AA9F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1140C91214BEF1500AA9F42 /* Assets.xcassets */; };
 		C1140C95214BEF1500AA9F42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1140C93214BEF1500AA9F42 /* LaunchScreen.storyboard */; };
+		C1FC54E3215523D20078C0B3 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FC54E2215523D20078C0B3 /* RoundedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		C1140C91214BEF1500AA9F42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1140C94214BEF1500AA9F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1140C96214BEF1500AA9F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1FC54E2215523D20078C0B3 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				C100C8EB2152B82300CA8CDF /* PopupUIView.swift */,
 				C100C8ED2152CC0800CA8CDF /* AppUIButton.swift */,
+				C1FC54E2215523D20078C0B3 /* RoundedImageView.swift */,
 			);
 			path = CustomControls;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				TargetAttributes = {
 					C1140C86214BEF1200AA9F42 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -250,6 +254,7 @@
 				C100C8CC2150017400CA8CDF /* TripModel.swift in Sources */,
 				C1140C8B214BEF1200AA9F42 /* AppDelegate.swift in Sources */,
 				C100C8E92152B3DC00CA8CDF /* AddTripViewController.swift in Sources */,
+				C1FC54E3215523D20078C0B3 /* RoundedImageView.swift in Sources */,
 				C100C8E421519C3600CA8CDF /* UIButtonExtension.swift in Sources */,
 				C100C8EE2152CC0800CA8CDF /* AppUIButton.swift in Sources */,
 				C100C8CE2150018500CA8CDF /* TripFunctions.swift in Sources */,
@@ -401,7 +406,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.ftreichel.Itinerary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -419,7 +424,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.ftreichel.Itinerary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -52,6 +52,14 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate{
         return 160
     }
     
+    /*func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view, actionPerformed: (Bool)->()) in
+            actionPerformed(true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [edit])
+    }*/
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerformed: @escaping (Bool) -> ()) in
             
