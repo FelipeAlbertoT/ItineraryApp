@@ -13,6 +13,8 @@ class TripsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
     
+    var tripIndexToEdit: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +30,7 @@ class TripsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddTripSegue" {
             let popup = segue.destination as! AddTripViewController
+            popup.tripIndexToEdit = self.tripIndexToEdit
             popup.doneSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
@@ -52,13 +55,20 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate{
         return 160
     }
     
-    /*func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view, actionPerformed: (Bool)->()) in
+            self.tripIndexToEdit = indexPath.row
+            self.performSegue(withIdentifier: "toAddTripSegue", sender: nil)
             actionPerformed(true)
         }
         
+        edit.image = UIGraphicsImageRenderer(size:CGSize(width: 35, height: 35)).image { _ in
+            UIImage(named:"edit")?.draw(in: CGRect(x: 0, y: 0, width: 35, height: 35))
+        }
+        edit.backgroundColor = UIColor(named: "Edit")
+        
         return UISwipeActionsConfiguration(actions: [edit])
-    }*/
+    }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerformed: @escaping (Bool) -> ()) in
@@ -76,7 +86,9 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate{
             self.present(alert, animated: true)
         }
         
-        //delete.image = delete
+        delete.image = UIGraphicsImageRenderer(size:CGSize(width: 35, height: 35)).image { _ in
+            UIImage(named:"trash")?.draw(in: CGRect(x: 0, y: 0, width: 35, height: 35))
+        }
         
         return UISwipeActionsConfiguration(actions: [delete])
     }
