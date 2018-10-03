@@ -100,7 +100,7 @@
                 <viewControllerPlaceholder storyboardName="AddTripViewController" id="fOV-6v-Srh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoZ-7C-yLD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="564" y="-87"/>
+            <point key="canvasLocation" x="509" y="-88"/>
         </scene>
     </scenes>
 </document>

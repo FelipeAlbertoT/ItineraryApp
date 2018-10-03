@@ -34,6 +34,7 @@ class TripsViewController: UIViewController {
             popup.doneSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
+            tripIndexToEdit = nil
         }
     }
 }
